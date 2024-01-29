@@ -1,0 +1,1 @@
+java -classpath .:"/home/user/Téléchargements/lib/*" Client3 $1
