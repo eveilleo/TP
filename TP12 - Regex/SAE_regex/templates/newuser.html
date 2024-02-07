@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouvel utilisateur</title>
+</head>
+<body>
+    <h2>Formulaire d'inscription</h2>
+    <p>Veuillez saisir un identifiant répondant aux critères suivants :</p>
+    <ul>
+        <li>Au moins 6 caractères</li>
+        <li>Au moins 1 chiffre</li>
+        <li>Au moins 1 majuscule et 1 minuscule</li>
+    </ul>
+    <form method="POST" action="">
+        <label for="utilisateur">Nom d'utilisateur :</label>
+        <input type="text" id="utilisateur" name="utilisateur" required>
+        <!-- Ajoutez d'autres champs de formulaire si nécessaire -->
+
+        <button type="submit">Envoyer</button>
+    </form>
+    {% if message %}
+        <p>{{ message | safe }}</p>
+    {% endif %}
+</body>
+</html>
