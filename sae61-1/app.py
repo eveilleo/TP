@@ -27,14 +27,14 @@ def new_user():
             message_password = "Le mot de passe ne respecte pas les critères spécifiés."
 
         # Critères regex pour l'adresse email
-        if re.match(r'^[A-Za-z0-9_\-\.]+@[A-Za-z0-9\-\.]+$', mail):
+        if re.match(r'^[\w\.-]+@[\w\.-]+\.\w+$', mail):
             message_mail = "L'adresse email est valide."
         else:
             message_mail = "L'adresse email n'est pas valide."
 
         return render_template('newuser.html', message_username=message_username, message_password=message_password, message_mail=message_mail)
 
-    return render_template('newuser.html')
+    return render_template('newuser.html', message_username=None, message_password=None, message_mail=None)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
