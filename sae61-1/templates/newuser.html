@@ -5,16 +5,32 @@
     <title>Nouvel Utilisateur</title>
 </head>
 <body>
-    <h1>Nouvel Utilisateur</h1>
+    <h1>Formulaire d'inscription</h1>
+    <p>Veuillez saisir un identifiant répondant aux critères suivants :</p>
+    <ul>
+        <li>Au moins 6 caractères</li>
+        <li>Uniquement des minuscules</li>
+        <li>Aucun autre caractère que alphanumérique ASCII (pas d'Unicode !)</li>
+    </ul>
     <form method="POST">
         <label for="username">Identifiant:</label><br>
-        <input type="text" id="username" name="utilisateur"><br><br>
+        <input type="text" id="username" name="username"><br><br>
 
+    <p>Veuillez saisir un email conforme (exemple@exemple.com) :</p>
+    <form method="POST">
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
+        <input type="email" id="mail" name="mail"><br><br>
 
+    <p>Veuillez saisir un mot de passe répondant aux critères suivants :</p>
+    <ul>
+        <li>Entre 6 et 15 caractères</li>
+        <li>Au moins 1 chiffre</li>
+        <li>Au moins 1 majuscule et 1 minuscule</li>
+        <li>Au moins 1 caractère parmi les 5 suivants : #%{}@</li>
+    </ul>
+    <form method="POST">
         <label for="password">Mot de passe:</label><br>
-        <input type="password" id="password" name="mot_de_passe"><br><br>
+        <input type="password" id="password" name="password"><br><br>
 
         <input type="submit" value="Valider">
     </form>

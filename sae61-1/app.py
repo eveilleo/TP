@@ -15,7 +15,7 @@ def new_user():
         mail = request.form['mail']
  
         # Critères regex pour l'identifiant
-        if re.match(r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$", username):
+        if re.match(r"^[a-z]{6,10}$", username):
             message_username = "L'identifiant respecte les critères spécifiés."
         else:
             message_username = "L'identifiant ne respecte pas les critères spécifiés."
